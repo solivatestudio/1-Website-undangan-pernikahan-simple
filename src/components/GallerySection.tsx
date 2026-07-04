@@ -51,7 +51,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ theme }) => {
   };
 
   return (
-    <section id="galeri" className={`render-contained relative overflow-hidden px-4 py-24 ${theme.bgSecondary}`}>
+    <section id="galeri" className={`render-contained relative overflow-hidden px-4 py-16 sm:py-20 md:py-24 ${theme.bgSecondary}`}>
       <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#10231c]/10 to-transparent" />
       <div className="max-w-6xl mx-auto text-center">
         <motion.div
@@ -63,7 +63,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ theme }) => {
           <span className="display-heritage text-xs font-bold text-[#7a4a28]">
             Galeri Kenangan
           </span>
-          <h2 className="font-serif-luxury text-4xl md:text-5xl font-bold mt-2">
+          <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
             Potret Kebahagiaan Kami
           </h2>
           <p className="text-sm opacity-75 mt-2 max-w-lg mx-auto">
@@ -82,7 +82,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ theme }) => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-5 py-2.5 text-xs font-bold tracking-wide transition-all ${
+              className={`px-3 py-2 sm:px-5 sm:py-2.5 text-[10px] sm:text-xs font-bold tracking-wide transition-all ${
                 activeTab === tab.id
                   ? theme.btnPrimary
                   : `border ${theme.borderClass} ${theme.bgCard} opacity-80 hover:opacity-100`
@@ -94,20 +94,20 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ theme }) => {
 
           <button
             onClick={() => setShowUploadModal(true)}
-            className="ml-2 flex items-center gap-1.5 border border-[#1f4b3a] bg-[#1f4b3a]/15 px-5 py-2.5 text-xs font-bold tracking-wide text-[#1f4b3a] transition-all hover:bg-[#1f4b3a]/25"
+            className="ml-1 sm:ml-2 flex items-center gap-1.5 border border-[#1f4b3a] bg-[#1f4b3a]/15 px-3 py-1.5 sm:px-5 sm:py-2.5 text-[10px] sm:text-xs font-bold tracking-wide text-[#1f4b3a] transition-all hover:bg-[#1f4b3a]/25"
           >
             <Camera className="w-3.5 h-3.5" />
-            <span>Unggah Foto Memori</span>
+            <span className="hidden sm:inline">Unggah Foto Memori</span>
           </button>
         </div>
 
         {/* Photo Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
             {filteredPhotos.map(photo => (
               <div
                 key={photo.id}
                 onClick={() => setSelectedPhoto(photo)}
-                className={`group relative cursor-pointer overflow-hidden border-[10px] border-[#f4ead8] bg-[#10231c] shadow-xl ${photo.aspectRatio}`}
+                className={`group relative cursor-pointer overflow-hidden border-[5px] sm:border-[8px] md:border-[10px] border-[#f4ead8] bg-[#10231c] shadow-xl ${photo.aspectRatio}`}
               >
                 <img
                   src={photo.url}
@@ -117,7 +117,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ theme }) => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-left text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 sm:p-6 text-left text-white">
                   <span className="text-[10px] uppercase tracking-widest text-amber-300 font-semibold mb-1">
                     {photo.category === 'bts' ? 'Behind the scenes' : photo.category}
                   </span>
@@ -157,7 +157,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ theme }) => {
               onClick={e => e.stopPropagation()}
               className="max-w-4xl w-full bg-stone-900 rounded-lg overflow-hidden shadow-2xl border border-stone-800 flex flex-col md:flex-row"
             >
-              <div className="md:w-2/3 bg-black flex items-center justify-center max-h-[70vh]">
+              <div className="md:w-2/3 bg-black flex items-center justify-center max-h-[50vh] md:max-h-[70vh]">
                 <img
                   src={selectedPhoto.url}
                   alt={selectedPhoto.title}
@@ -165,7 +165,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ theme }) => {
                   className="max-h-[70vh] w-full object-contain"
                 />
               </div>
-              <div className="md:w-1/3 p-6 md:p-8 flex flex-col justify-center text-left text-white">
+              <div className="md:w-1/3 p-5 sm:p-6 md:p-8 flex flex-col justify-center text-left text-white">
                 <span className="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-[10px] font-semibold uppercase tracking-widest mb-3 w-fit">
                   {selectedPhoto.category}
                 </span>
@@ -194,7 +194,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ theme }) => {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className={`luxury-card max-w-md w-full p-6 md:p-8 border ${theme.borderClass} ${theme.bgCard} text-left relative`}
+              className={`luxury-card max-w-md w-full p-5 sm:p-6 md:p-8 border ${theme.borderClass} ${theme.bgCard} text-left relative`}
             >
               <button
                 onClick={() => setShowUploadModal(false)}

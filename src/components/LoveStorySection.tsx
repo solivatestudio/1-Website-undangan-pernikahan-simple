@@ -10,8 +10,8 @@ interface LoveStorySectionProps {
 
 export const LoveStorySection: React.FC<LoveStorySectionProps> = ({ theme }) => {
   return (
-    <section id="kisah" className="relative overflow-hidden px-4 py-24">
-      <div className="absolute left-0 top-0 h-full w-1/3 bg-[#1f4b3a]/10" />
+    <section id="kisah" className="relative overflow-hidden px-4 py-16 sm:py-20 md:py-24">
+      <div className="absolute left-0 top-0 h-full w-1/3 bg-[#1f4b3a]/10 hidden sm:block" />
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ export const LoveStorySection: React.FC<LoveStorySectionProps> = ({ theme }) => 
           <span className="display-heritage text-xs font-bold text-[#7a4a28]">
             Perjalanan Cinta
           </span>
-          <h2 className="font-serif-luxury text-4xl md:text-5xl font-bold mt-2">
+          <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
             Timeline Kisah Cinta Kami
           </h2>
           <p className="text-sm opacity-75 mt-2 max-w-lg mx-auto">
@@ -53,8 +53,8 @@ export const LoveStorySection: React.FC<LoveStorySectionProps> = ({ theme }) => 
 
                   {/* Content Box */}
                   <div className={`w-full md:w-[45%] pl-12 md:pl-0 ${isEven ? 'md:pr-10 md:text-right' : 'md:pl-10 md:text-left'}`}>
-                    <div className={`city-frame overflow-hidden bg-[#f8efdf]/90 p-6 transition-colors group-hover:border-[#275448]/50 md:p-8`}>
-                      <div className={`flex items-center gap-2 mb-2 text-xs font-semibold text-amber-600 dark:text-amber-400 ${isEven ? 'md:justify-end' : ''}`}>
+                    <div className={`city-frame overflow-hidden bg-[#f8efdf]/90 p-4 sm:p-6 transition-colors group-hover:border-[#275448]/50 md:p-8`}>
+                      <div className={`flex items-center gap-1.5 sm:gap-2 mb-2 text-[10px] sm:text-xs font-semibold text-amber-600 dark:text-amber-400 flex-wrap ${isEven ? 'md:justify-end' : ''}`}>
                         <Calendar className="w-3.5 h-3.5" />
                         <span>{step.dateStr}</span>
                         <span className="opacity-40">•</span>
@@ -66,7 +66,7 @@ export const LoveStorySection: React.FC<LoveStorySectionProps> = ({ theme }) => 
                         {step.year}
                       </span>
 
-                      <h3 className="font-serif-luxury font-bold text-2xl mb-2">
+                      <h3 className="font-serif-luxury font-bold text-xl sm:text-2xl mb-2">
                         {step.title}
                       </h3>
 

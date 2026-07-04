@@ -81,7 +81,7 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ theme }) => 
   };
 
   return (
-    <section className="relative overflow-hidden px-4 py-24">
+    <section className="relative overflow-hidden px-4 py-16 sm:py-20 md:py-24">
       <div className="absolute inset-0 bg-[#10231c]" />
       <div className="absolute inset-0 opacity-20 city-stripes" />
       <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -89,7 +89,7 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ theme }) => 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden border border-[#d4a45f]/30 bg-[#f4ead8] p-8 text-[#19251f] shadow-2xl md:p-12"
+          className="relative overflow-hidden border border-[#d4a45f]/30 bg-[#f4ead8] p-5 sm:p-8 text-[#19251f] shadow-2xl md:p-12"
         >
           {/* Subtle gold ribbon top header */}
           <div className="inline-flex items-center gap-2 border border-[#7a4a28]/30 bg-[#7a4a28]/10 px-4 py-1.5 text-[11px] tracking-[0.28em] uppercase mb-4 font-bold text-[#7a4a28]">
@@ -97,7 +97,7 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ theme }) => 
             <span>Menuju Hari Bahagia</span>
           </div>
 
-          <h2 className="font-serif-luxury text-3xl md:text-5xl font-bold mb-3">
+          <h2 className="font-serif-luxury text-2xl sm:text-3xl md:text-5xl font-bold mb-3">
             Hitung Mundur Pernikahan
           </h2>
           <p className="text-sm opacity-80 mb-8 max-w-lg mx-auto">
@@ -115,9 +115,9 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ theme }) => 
               <motion.div
                 key={item.label}
                 whileHover={{ y: -4 }}
-                className="flex flex-col items-center justify-center border border-[#7a4a28]/25 bg-[#ead8b9]/70 p-5 shadow-md"
+                className="flex flex-col items-center justify-center border border-[#7a4a28]/25 bg-[#ead8b9]/70 p-3 sm:p-5 shadow-md"
               >
-                <span className="font-serif-luxury font-bold text-4xl sm:text-5xl text-amber-600 dark:text-amber-400">
+                <span className="font-serif-luxury font-bold text-3xl sm:text-4xl md:text-5xl text-amber-600 dark:text-amber-400">
                   {item.value.toString().padStart(2, '0')}
                 </span>
                 <span className="text-xs uppercase tracking-widest mt-1 opacity-75 font-semibold">

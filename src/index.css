@@ -34,6 +34,12 @@
     color: #fffaf1;
     background: var(--metro);
   }
+
+  @media (max-width: 640px) {
+    html {
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
 }
 
 .font-serif-luxury {
@@ -201,6 +207,12 @@
 .render-contained {
   content-visibility: auto;
   contain-intrinsic-size: 900px;
+}
+
+@media (max-width: 640px) {
+  .render-contained {
+    contain-intrinsic-size: 600px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

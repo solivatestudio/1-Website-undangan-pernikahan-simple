@@ -59,7 +59,7 @@ export default function App() {
   };
 
   return (
-    <div className={`paper-grain min-h-screen transition-colors duration-500 ${currentTheme.bgMain} ${currentTheme.textPrimary} relative pb-28`}>
+    <div className={`paper-grain min-h-screen transition-colors duration-500 ${currentTheme.bgMain} ${currentTheme.textPrimary} relative pb-20 sm:pb-28`}>
       <AnimatePresence>
         {!isCoverOpened && (
           <EnvelopeCover
@@ -91,10 +91,10 @@ export default function App() {
       </main>
 
       {/* Elegant Footer */}
-      <footer className={`relative z-10 border-t ${currentTheme.borderClass} ${currentTheme.bgSecondary} px-4 py-14 text-center`}>
+      <footer className={`relative z-10 border-t ${currentTheme.borderClass} ${currentTheme.bgSecondary} px-4 py-10 sm:py-14 text-center`}>
         <div className="mx-auto max-w-xl space-y-3">
           <p className="display-heritage text-[10px] text-[#8a6338]">With Gratitude</p>
-          <h3 className="font-serif-luxury text-4xl font-semibold text-[#1f4b3a]">
+          <h3 className="font-serif-luxury text-3xl sm:text-4xl font-semibold text-[#1f4b3a]">
             {COUPLE_DATA.groom.nickname} & {COUPLE_DATA.bride.nickname}
           </h3>
           <p className="font-serif-luxury italic text-sm opacity-80">

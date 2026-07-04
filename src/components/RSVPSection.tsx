@@ -261,7 +261,7 @@ export const RSVPSection: React.FC<RSVPSectionProps> = ({ theme }) => {
   };
 
   return (
-    <section id="rsvp" className="render-contained relative overflow-hidden bg-[#f1e7d7] px-4 py-24">
+    <section id="rsvp" className="render-contained relative overflow-hidden bg-[#f1e7d7] px-4 py-16 sm:py-20 md:py-24">
       <div className="absolute inset-0 city-stripes opacity-35" />
       <div className="relative mx-auto max-w-6xl">
         <div className="mb-12 grid gap-6 md:grid-cols-[0.85fr_1.15fr] md:items-end">
@@ -269,7 +269,7 @@ export const RSVPSection: React.FC<RSVPSectionProps> = ({ theme }) => {
             <span className="display-heritage text-xs font-bold text-[#8a6338]">
               Konfirmasi Kehadiran
             </span>
-            <h2 className="mt-2 max-w-xl font-serif-luxury text-4xl font-bold leading-tight text-[#202927] md:text-6xl">
+            <h2 className="mt-2 max-w-xl font-serif-luxury text-3xl sm:text-4xl font-bold leading-tight text-[#202927] md:text-5xl lg:text-6xl">
               RSVP & Buku Tamu
             </h2>
           </div>
@@ -279,7 +279,7 @@ export const RSVPSection: React.FC<RSVPSectionProps> = ({ theme }) => {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
-          <form onSubmit={handleSubmitRSVP} className="city-frame bg-[#fbf7ef]/95 p-6 md:p-8">
+          <form onSubmit={handleSubmitRSVP} className="city-frame bg-[#fbf7ef]/95 p-4 sm:p-6 md:p-8">
             <div className="mb-7 flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center bg-[#275448] text-[#fbf7ef]">
                 <UserCheck className="h-5 w-5" />
@@ -371,11 +371,11 @@ export const RSVPSection: React.FC<RSVPSectionProps> = ({ theme }) => {
               )}
 
               <div>
-                <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                <div className="mb-2 flex flex-wrap items-center justify-between gap-1.5 sm:gap-2">
                   <span className="display-heritage text-[10px] font-bold text-[#66706c]">
                     Ucapan & Doa
                   </span>
-                  <div className="flex gap-1.5">
+                  <div className="flex flex-wrap gap-1 sm:gap-1.5">
                     {Object.entries(wishTemplates).map(([key, value]) => (
                       <button
                         key={key}
@@ -441,7 +441,7 @@ export const RSVPSection: React.FC<RSVPSectionProps> = ({ theme }) => {
             )}
           </form>
 
-          <div className="metro-panel city-frame p-6 md:p-8">
+          <div className="metro-panel city-frame p-4 sm:p-6 md:p-8">
             <div className="mb-6 flex flex-col gap-4 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
                 <MessageSquareHeart className="h-6 w-6 text-[#d7aa67]" />

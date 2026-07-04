@@ -12,7 +12,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
   const heroPhoto = INITIAL_PHOTOS[0]?.url;
 
   return (
-    <section id="hero" className="relative min-h-[96vh] overflow-hidden bg-[#151817] px-4 py-16 text-[#fff8ee]">
+    <section id="hero" className="relative min-h-[92vh] sm:min-h-[96vh] overflow-hidden bg-[#151817] px-4 py-10 sm:py-16 text-[#fff8ee]">
       <img
         src={heroPhoto}
         alt={`${COUPLE_DATA.groom.nickname} dan ${COUPLE_DATA.bride.nickname}`}
@@ -38,41 +38,41 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
         transition={{ duration: 0.9 }}
         className="relative z-10 mx-auto flex min-h-[82vh] max-w-5xl flex-col items-center justify-center text-center"
       >
-        <div className="inline-flex items-center gap-2 border border-white/30 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.32em] text-[#f8dfc5] backdrop-blur-md">
-          <Heart className="h-3.5 w-3.5 fill-[#f3c1b4] text-[#f3c1b4]" />
+        <div className="inline-flex items-center gap-2 border border-white/30 bg-white/10 px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.32em] text-[#f8dfc5] backdrop-blur-md">
+          <Heart className="h-3 w-3 sm:h-3.5 sm:w-3.5 fill-[#f3c1b4] text-[#f3c1b4]" />
           <span>The Wedding of</span>
         </div>
 
-        <h3 className="mt-8 font-serif-luxury text-sm uppercase tracking-[0.38em] text-[#f8dfc5]/90">
+        <h3 className="mt-5 sm:mt-8 font-serif-luxury text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.38em] text-[#f8dfc5]/90">
           Bismillahirrahmannirrahim
         </h3>
 
-        <h1 className="font-wedding-names mt-5 text-[5.8rem] font-normal leading-[0.82] text-[#fff8ee] drop-shadow-2xl sm:text-[8rem] md:text-[11rem]">
+        <h1 className="font-wedding-names mt-4 sm:mt-5 text-[3.6rem] sm:text-[5.8rem] md:text-[8rem] lg:text-[11rem] font-normal leading-[0.82] text-[#fff8ee] drop-shadow-2xl">
           {COUPLE_DATA.groom.nickname}
-          <span className="mx-auto my-1 block font-serif-luxury text-3xl italic leading-none text-[#f3c1b4] sm:text-5xl md:text-6xl">
+          <span className="mx-auto my-1 block font-serif-luxury text-2xl sm:text-3xl md:text-5xl lg:text-6xl italic leading-none text-[#f3c1b4]">
             &
           </span>
           {COUPLE_DATA.bride.nickname}
         </h1>
 
-        <p className="mt-7 max-w-2xl text-base leading-relaxed text-[#fff8ee]/86 md:text-lg">
+        <p className="mt-5 sm:mt-7 max-w-2xl text-sm sm:text-base leading-relaxed text-[#fff8ee]/86 md:text-lg px-2 sm:px-0">
           Dengan penuh syukur dan bahagia, kami mengundang Anda untuk hadir dan menjadi bagian dari hari istimewa kami.
         </p>
 
-        <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <div className="flex min-w-64 items-center justify-center gap-3 border border-white/25 bg-white/12 px-5 py-3 text-sm font-bold backdrop-blur-md">
-            <Calendar className="h-4 w-4 text-[#f3c1b4]" />
+        <div className="mt-6 sm:mt-9 flex flex-col items-center justify-center gap-2.5 sm:gap-3 sm:flex-row w-full px-2 sm:px-0">
+          <div className="flex w-full sm:w-auto min-w-0 sm:min-w-64 items-center justify-center gap-2.5 sm:gap-3 border border-white/25 bg-white/12 px-4 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm font-bold backdrop-blur-md">
+            <Calendar className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#f3c1b4] shrink-0" />
             <span>{COUPLE_DATA.weddingDateDisplay}</span>
           </div>
-          <div className="flex min-w-64 items-center justify-center gap-3 border border-white/25 bg-white/12 px-5 py-3 text-sm font-bold backdrop-blur-md">
-            <MapPin className="h-4 w-4 text-[#f3c1b4]" />
+          <div className="flex w-full sm:w-auto min-w-0 sm:min-w-64 items-center justify-center gap-2.5 sm:gap-3 border border-white/25 bg-white/12 px-4 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm font-bold backdrop-blur-md">
+            <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#f3c1b4] shrink-0" />
             <span>Jakarta, Indonesia</span>
           </div>
         </div>
 
         <a
           href="#acara"
-          className="mt-10 inline-flex items-center justify-center border border-[#f8dfc5]/50 bg-[#f8dfc5] px-7 py-3 text-sm font-extrabold text-[#202927] shadow-2xl shadow-black/25 transition hover:-translate-y-0.5 hover:bg-white"
+          className="mt-7 sm:mt-10 inline-flex items-center justify-center border border-[#f8dfc5]/50 bg-[#f8dfc5] px-5 py-2.5 sm:px-7 sm:py-3 text-xs sm:text-sm font-extrabold text-[#202927] shadow-2xl shadow-black/25 transition hover:-translate-y-0.5 hover:bg-white"
         >
           Lihat Detail Acara
         </a>

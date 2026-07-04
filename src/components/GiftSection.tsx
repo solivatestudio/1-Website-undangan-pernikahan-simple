@@ -24,7 +24,7 @@ export const GiftSection: React.FC<GiftSectionProps> = ({ theme }) => {
   };
 
   return (
-    <section id="angpao" className={`py-20 px-4 ${theme.bgSecondary}`}>
+    <section id="angpao" className={`py-16 px-4 sm:py-20 ${theme.bgSecondary}`}>
       <div className="max-w-5xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export const GiftSection: React.FC<GiftSectionProps> = ({ theme }) => {
           <span className="display-heritage text-xs font-bold text-[#7a4a28]">
             Tanda Kasih
           </span>
-          <h2 className="font-serif-luxury text-4xl md:text-5xl font-bold mt-2">
+          <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
             Angpao & Kado Digital
           </h2>
           <p className="text-sm opacity-75 mt-2 max-w-lg mx-auto">
@@ -49,7 +49,7 @@ export const GiftSection: React.FC<GiftSectionProps> = ({ theme }) => {
             <motion.div
               whileHover={{ y: -6 }}
               key={account.id}
-              className={`city-frame p-6 bg-[#f8efdf]/90 text-left relative overflow-hidden flex flex-col justify-between`}
+              className={`city-frame p-4 sm:p-6 bg-[#f8efdf]/90 text-left relative overflow-hidden flex flex-col justify-between`}
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
 
@@ -61,7 +61,7 @@ export const GiftSection: React.FC<GiftSectionProps> = ({ theme }) => {
                   <Wallet className="w-5 h-5 text-amber-500 opacity-60" />
                 </div>
 
-                <p className="font-mono text-2xl font-bold tracking-wider my-3 text-amber-600 dark:text-amber-400">
+                <p className="font-mono text-xl sm:text-2xl font-bold tracking-wider my-3 text-amber-600 dark:text-amber-400">
                   {account.accountNumber}
                 </p>
 
@@ -95,7 +95,7 @@ export const GiftSection: React.FC<GiftSectionProps> = ({ theme }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className={`city-frame metro-panel p-8 max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-left`}
+          className={`city-frame metro-panel p-5 sm:p-6 md:p-8 max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-left`}
         >
           <div className="flex items-start gap-4">
             <div className="p-3.5 rounded-2xl bg-amber-500/20 text-amber-600 dark:text-amber-400 shrink-0">

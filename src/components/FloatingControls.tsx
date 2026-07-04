@@ -33,12 +33,12 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({
   return (
     <>
       {/* Top/Side Theme & Music Buttons */}
-      <div className="fixed top-4 right-4 z-40 flex items-center gap-2">
+      <div className="fixed top-3 right-3 sm:top-4 sm:right-4 z-40 flex items-center gap-1.5 sm:gap-2">
         {/* Audio Button */}
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={onToggleAudio}
-          className={`flex items-center justify-center border p-3 shadow-xl transition-all ${
+          className={`flex items-center justify-center border p-2 sm:p-3 shadow-xl transition-all ${
             isAudioPlaying
               ? 'bg-amber-600 text-white border-amber-400 animate-pulse'
               : `${currentTheme.bgCard} ${currentTheme.borderClass}`
@@ -46,9 +46,9 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({
           title={isAudioPlaying ? 'Matikan Musik Romantis' : 'Putar Musik Romantis'}
         >
           {isAudioPlaying ? (
-            <Volume2 className="w-5 h-5" />
+            <Volume2 className="w-4 h-4 sm:w-5 sm:h-5" />
           ) : (
-            <VolumeX className="w-5 h-5 opacity-60" />
+            <VolumeX className="w-4 h-4 sm:w-5 sm:h-5 opacity-60" />
           )}
         </motion.button>
 
@@ -57,7 +57,7 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setShowThemeMenu(!showThemeMenu)}
-            className={`flex items-center gap-2 border px-3.5 py-2.5 text-xs font-bold shadow-xl ${currentTheme.bgCard} ${currentTheme.borderClass}`}
+            className={`flex items-center gap-1.5 sm:gap-2 border px-2.5 py-2 sm:px-3.5 sm:py-2.5 text-xs font-bold shadow-xl ${currentTheme.bgCard} ${currentTheme.borderClass}`}
           >
             <Palette className="w-4 h-4 text-amber-500" />
             <span className="hidden sm:inline">{currentTheme.badge}</span>
@@ -98,17 +98,17 @@ export const FloatingControls: React.FC<FloatingControlsProps> = ({
       </div>
 
       {/* Bottom Floating Navigation Dock */}
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 px-2">
-        <div className={`flex items-center gap-1 border ${currentTheme.borderClass} ${currentTheme.bgCard} px-3 py-2 shadow-2xl backdrop-blur-xl sm:gap-2`}>
+      <div className="fixed bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 z-40 px-1 sm:px-2 w-[calc(100%-0.5rem)] sm:w-auto">
+        <div className={`flex items-center justify-center gap-0 sm:gap-1 border ${currentTheme.borderClass} ${currentTheme.bgCard} px-1 py-1.5 sm:px-3 sm:py-2 shadow-2xl backdrop-blur-xl md:gap-2`}>
           {navItems.map(item => {
             const Icon = item.icon;
             return (
               <a
                 key={item.label}
                 href={item.href}
-                className="group flex items-center gap-1.5 px-3 py-2 text-xs font-bold transition-all hover:bg-[#1f4b3a]/15 hover:text-[#1f4b3a]"
+                className="group flex items-center gap-1 sm:gap-1.5 px-1.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-bold transition-all hover:bg-[#1f4b3a]/15 hover:text-[#1f4b3a] rounded-sm"
               >
-                <Icon className="w-4 h-4 text-amber-500 group-hover:scale-110 transition-transform" />
+                <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500 group-hover:scale-110 transition-transform" />
                 <span className="hidden md:inline">{item.label}</span>
               </a>
             );

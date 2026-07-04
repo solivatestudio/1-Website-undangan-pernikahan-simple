@@ -10,7 +10,7 @@ interface EventSectionProps {
 
 export const EventSection: React.FC<EventSectionProps> = ({ theme }) => {
   return (
-    <section id="acara" className={`py-20 px-4 ${theme.bgSecondary}`}>
+    <section id="acara" className={`py-16 px-4 sm:py-20 ${theme.bgSecondary}`}>
       <div className="max-w-6xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,7 +21,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ theme }) => {
           <span className="display-heritage text-xs font-bold text-[#7a4a28]">
             Rangkaian Acara
           </span>
-          <h2 className="font-serif-luxury text-4xl md:text-5xl font-bold mt-2">
+          <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl font-bold mt-2">
             Waktu & Tempat Pelaksanaan
           </h2>
           <p className="text-sm opacity-75 mt-2 max-w-xl mx-auto">
@@ -35,7 +35,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ theme }) => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className={`city-frame bg-[#f8efdf]/90 p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group text-left`}
+            className={`city-frame bg-[#f8efdf]/90 p-5 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden group text-left`}
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
             
@@ -80,7 +80,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ theme }) => {
               href={COUPLE_DATA.akadMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3.5 px-5 rounded-lg border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 flex items-center justify-center gap-2 font-bold text-sm transition-all mt-4"
+              className="w-full py-3 sm:py-3.5 px-4 sm:px-5 rounded-lg border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 flex items-center justify-center gap-2 font-bold text-xs sm:text-sm transition-all mt-4"
             >
               <Navigation className="w-4 h-4 text-amber-500" />
               <span>Buka Petunjuk Arah (Google Maps)</span>
@@ -93,7 +93,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ theme }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className={`city-frame metro-panel p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group text-left`}
+            className={`city-frame metro-panel p-5 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden group text-left`}
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-full blur-2xl pointer-events-none" />
             
@@ -138,7 +138,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ theme }) => {
               href={COUPLE_DATA.receptionMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-full py-3.5 px-5 rounded-lg flex items-center justify-center gap-2 font-bold text-sm transition-all mt-4 ${theme.btnPrimary}`}
+              className={`w-full py-3 sm:py-3.5 px-4 sm:px-5 rounded-lg flex items-center justify-center gap-2 font-bold text-xs sm:text-sm transition-all mt-4 ${theme.btnPrimary}`}
             >
               <Navigation className="w-4 h-4" />
               <span>Buka Petunjuk Arah (Google Maps)</span>
@@ -151,34 +151,34 @@ export const EventSection: React.FC<EventSectionProps> = ({ theme }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className={`city-frame city-stripes mt-12 p-8 max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-left`}
+          className={`city-frame city-stripes mt-8 sm:mt-12 p-5 sm:p-6 md:p-8 max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-left`}
         >
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center shrink-0">
               <Shirt className="w-6 h-6 text-amber-600 dark:text-amber-400" />
             </div>
             <div>
-              <h4 className="font-serif-luxury font-bold text-xl">Dress Code & Busana Tamu</h4>
+              <h4 className="font-serif-luxury font-bold text-lg sm:text-xl">Dress Code & Busana Tamu</h4>
               <p className="text-xs opacity-75 mt-0.5">Rekomendasi palet warna busana formal untuk kenyamanan dan keanggunan momen foto bersama.</p>
             </div>
           </div>
 
           <div className="flex items-center gap-3 shrink-0">
             <div className="flex flex-col items-center">
-              <div className="w-9 h-9 rounded-full bg-[#d5c2a5] border-2 border-white shadow-md" title="Champagne Cream" />
-              <span className="text-[10px] opacity-70 mt-1">Champagne</span>
+              <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#d5c2a5] border-2 border-white shadow-md" title="Champagne Cream" />
+              <span className="text-[9px] sm:text-[10px] opacity-70 mt-1">Champagne</span>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-9 h-9 rounded-full bg-[#71836c] border-2 border-white shadow-md" title="Sage Green" />
-              <span className="text-[10px] opacity-70 mt-1">Sage Green</span>
+              <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#71836c] border-2 border-white shadow-md" title="Sage Green" />
+              <span className="text-[9px] sm:text-[10px] opacity-70 mt-1">Sage Green</span>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-9 h-9 rounded-full bg-[#3d2f2b] border-2 border-white shadow-md" title="Deep Mocha" />
-              <span className="text-[10px] opacity-70 mt-1">Mocha</span>
+              <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#3d2f2b] border-2 border-white shadow-md" title="Deep Mocha" />
+              <span className="text-[9px] sm:text-[10px] opacity-70 mt-1">Mocha</span>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-9 h-9 rounded-full bg-[#e8ded1] border-2 border-white shadow-md" title="Soft Ivory" />
-              <span className="text-[10px] opacity-70 mt-1">Ivory</span>
+              <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#e8ded1] border-2 border-white shadow-md" title="Soft Ivory" />
+              <span className="text-[9px] sm:text-[10px] opacity-70 mt-1">Ivory</span>
             </div>
           </div>
         </motion.div>
