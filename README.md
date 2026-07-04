@@ -76,9 +76,6 @@ cp .env.example .env.local
 ### Konfigurasi `.env.local`
 
 ```env
-# Opsional: API Key Gemini (untuk fitur AI jika dipakai)
-GEMINI_API_KEY="your_gemini_api_key"
-
 # Opsional: Endpoint Google Apps Script untuk penyimpanan RSVP ke Google Sheets
 VITE_RSVP_ENDPOINT="https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec"
 ```
@@ -235,8 +232,10 @@ Pull request dan saran sangat disambut! Untuk perubahan besar, harap buka *issue
 
 **Dibuat dengan ❤️ oleh:**
 
-- **[hmad28](https://github.com/hmad28)** — Developer & Designer
-- **email:** email1.hammad@gmail.com
+| Role | GitHub | Email |
+|---|---|---|
+| 🏠 **Author** | **[solivatestudio](https://github.com/solivatestudio)** | — |
+| 👨‍💻 **Co-Author** | **[hmad28](https://github.com/hmad28)** | email1.hammad@gmail.com |
 
 ---
 
