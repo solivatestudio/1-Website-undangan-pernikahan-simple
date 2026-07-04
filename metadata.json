@@ -1,0 +1,6 @@
+{
+  "name": "The Wedding of Hammad & Fulanah",
+  "description": "Undangan Pernikahan Digital Eksklusif Hammad & Fulanah dengan galeri foto, hitung mundur interaktif, RSVP digital, angpao online, dan timeline kisah cinta.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
