@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Heart, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
@@ -12,6 +12,14 @@ interface EnvelopeCoverProps {
 }
 
 export const EnvelopeCover: React.FC<EnvelopeCoverProps> = ({ guestName, theme, onOpen }) => {
+  // Lock body scroll when cover is visible
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
   const handleOpenClick = () => {
     confetti({
       particleCount: 80,
@@ -22,7 +30,7 @@ export const EnvelopeCover: React.FC<EnvelopeCoverProps> = ({ guestName, theme, 
   };
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-8 ${theme.bgMain} ${theme.textPrimary} overflow-hidden`}>
+    <div className={`fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-8 ${theme.bgMain} ${theme.textPrimary} overflow-hidden overscroll-none touch-none`}>
       <div className="absolute inset-0 city-stripes opacity-70" />
       <div className="absolute -top-20 -left-20 w-96 h-96 rounded-full blur-3xl opacity-30 pointer-events-none" style={{ background: theme.glowColor }} />
       <div className="absolute -bottom-24 right-0 w-[32rem] h-[32rem] rounded-full blur-3xl opacity-30 pointer-events-none bg-[#b95838]" />
